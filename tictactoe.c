@@ -1,4 +1,6 @@
-#include <stdio.h>
+
+        
+    #include <stdio.h>
 #include <stdlib.h>
 
 char square[10] = { 'o', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
@@ -9,7 +11,7 @@ void test();
 
 int main()
 {
-    int i, choice;
+    int i, choice, ranum;
     square[7] = 'X';
     do
     {
@@ -48,6 +50,7 @@ int main()
         else
         {
             printf("Invalid move ");    
+            continue;
         } */
         i = checkwin('X', 'X');
         if (i == 0)
@@ -85,9 +88,9 @@ int main()
 /*********************************************
 
 FUNCTION TO RETURN GAME STATUS
-1 FOR GAME IS OVER WITH RESULT
--1 FOR GAME IS IN PROGRESS
-O GAME IS OVER AND NO RESULT
+2 COMPUTER MAKES A MOVE 
+-1 GAME IS IN PROGRESS
+O PLAYER MAKES A MOVE 
  **********************************************/
 
 int checkwin(char check, char mark)
@@ -267,31 +270,26 @@ void board()
 
 void test()
 {
-    int b;
-    int c;
     if (square[1] == '1')
        square[1] = 'O';
-    else if (square[2] == '2')
-       square[2] = 'O';
-    else if (square[4] == '4')
-       square[4] = 'O';
-    else if (square[3] == '3')
-       square[3] = 'O';
     else if (square[5] == '5')
        square[5] = 'O';
+    else if (square[3] == '3')
+       square[3] = 'O';
+    else if (square[8] == '8')
+       square[8] = 'O';
+    else if (square[5] == '5')
+       square[1] = 'O';
     else if (square[6] == '6')
        square[6] = 'O';
     else if (square[7] == '7')
        square[7] = 'O';
-    else if (square[8] == '8')
-       square[8] = 'O';
-    else if (square[9] == '9')
-       square[9] = 'O';
+    else if (square[4] == '4')
+       square[4] = 'O';
+    else if (square[2] == '2')
+       square[2] = 'O';
     else 
     {
        /* do nothing */
     }
 }
-/*******************************************************************
-END OF PROJECT
- ***********************************/
