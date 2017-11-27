@@ -1,6 +1,6 @@
 
         
-    #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 char square[10] = { 'o', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
@@ -11,13 +11,13 @@ void test();
 
 int main()
 {
-    int i, choice, ranum;
+    int i, choice;
     square[7] = 'X';
     do
     {
         board();
-        test();
-       /* printf("Player, enter a number:  ");
+        /* test(); */
+        printf("Player, enter a number:  ");
         scanf("%d", &choice);
      
         if (choice == 1 && square[1] == '1')
@@ -51,7 +51,7 @@ int main()
         {
             printf("Invalid move ");    
             continue;
-        } */
+        } 
         i = checkwin('X', 'X');
         if (i == 0)
         {    printf ("Computer is winning!");
@@ -246,11 +246,8 @@ int checkwin(char check, char mark)
 
 void board()
 {
-
     printf("\n\n\tTic Tac Toe\n\n");
-
     printf("Computer (X)  -  Player (O)\n\n\n");
-
 
     printf("     |     |     \n");
     printf("  %c  |  %c  |  %c \n", square[1], square[2], square[3]);
